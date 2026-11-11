@@ -30,7 +30,9 @@ document.querySelectorAll('form[name="idopontkeres"]').forEach(form => {
         body: data.toString(),
       });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      window.location.assign('/koszonjuk.html');
+      form.reset();
+      status.textContent = 'Köszönöm, megkaptam az üzeneted! Hamarosan jelentkezem.';
+      button.disabled = false;
     } catch (error) {
       status.textContent = 'Az üzenet most nem ment el. Kérlek, írj a hello.elizabeauty@gmail.com címre, vagy hívj a +36 20 344 9272 számon.';
       button.disabled = false;
