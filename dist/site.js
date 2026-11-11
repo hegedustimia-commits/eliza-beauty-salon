@@ -21,7 +21,7 @@ document.querySelectorAll('form[name="idopontkeres"]').forEach(form => {
       formName.name = 'form-name';
       form.append(formName);
     }
-    formName.value = form.name;
+    formName.value = form.getAttribute('name');
     const status = form.querySelector('.form-status');
     const button = form.querySelector('button[type="submit"]');
     status.textContent = 'Küldöm az üzenetedet…';
