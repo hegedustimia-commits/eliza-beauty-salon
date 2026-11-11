@@ -4,7 +4,7 @@ A kiválasztott, légies weboldal statikus forrása. A négy főoldal és az ada
 
 ## Állapot
 
-- Az időpontkérő űrlap előkészített e-mailt nyit meg. Nem küld adatot háttérszolgáltatásnak.
+- Az időpontkérő űrlap Netlify Formsot használ. A Netlify-oldalon engedélyezni kell a form detectiont, majd az új verziót telepíteni. A Forms → Submission notifications részen külön be kell állítani a hello.elizabeauty@gmail.com címre küldött értesítést; Netlify címmegerősítést kérhet. Az éles próbaküldés és az e-mail beérkezése még nincs ellenőrizve.
 - Az Arcápolási Kisokos feliratkozó űrlap még nincs hírlevél-szolgáltatóhoz kapcsolva.
 - Az adatkezelési oldal tervezet; a tényleges szolgáltatók és megőrzési idők ismeretében véglegesítendő.
 

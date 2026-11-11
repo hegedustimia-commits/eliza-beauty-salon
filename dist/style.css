@@ -34,3 +34,5 @@
 @media(max-width:800px){.care-intro{grid-template-columns:1fr}.care-photo{max-height:300px;box-shadow:12px 12px 0 var(--art2)}.care-photo img{height:300px}.care-section .cards{margin-top:2rem}}
 
 .section-subtitle{font-size:1.12rem;line-height:1.6;color:var(--muted);max-width:680px;margin-top:-.6rem;font-style:italic}
+
+.honeypot{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
