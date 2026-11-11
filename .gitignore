@@ -1,0 +1,4 @@
+add_photos.py
+*.tar.gz
+.DS_Store
+Thumbs.db

@@ -1,0 +1,4 @@
+document.querySelector('.menu-toggle')?.addEventListener('click',e=>{const n=document.querySelector('.nav');const open=n.classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',String(open))});document.querySelectorAll('form[data-kind]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const status=form.querySelector('.form-status');if(form.dataset.kind==='newsletter'){status.textContent='A feliratkozás bekötése folyamatban van. Kérjük, érdeklődj e-mailben: hello.elizabeauty@gmail.com.';return}const data=new FormData(form);const subject=encodeURIComponent('Időpontkérés az Eliza Beauty Salonba');const body=encodeURIComponent(`Név: ${data.get('name')}
+E-mail: ${data.get('email')}
+
+${data.get('message')}`);location.href=`mailto:hello.elizabeauty@gmail.com?subject=${subject}&body=${body}`;status.textContent='Megnyitottuk a leveleződet az előkészített üzenettel. A küldést ott tudod befejezni.';}));
