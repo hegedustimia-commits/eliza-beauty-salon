@@ -12,30 +12,19 @@ document.querySelectorAll('form[data-kind="newsletter"]').forEach(form => {
 });
 
 document.querySelectorAll('form[name="idopontkeres"]').forEach(form => {
-  form.addEventListener('submit', async event => {
-    event.preventDefault();
+  form.addEventListener('submit', () => {
     if (!form.reportValidity()) return;
-
+    let formName = form.querySelector('input[name="form-name"]');
+    if (!formName) {
+      formName = document.createElement('input');
+      formName.type = 'hidden';
+      formName.name = 'form-name';
+      form.append(formName);
+    }
+    formName.value = form.name;
     const status = form.querySelector('.form-status');
     const button = form.querySelector('button[type="submit"]');
-    const data = new URLSearchParams(new FormData(form));
-    data.set('form-name', form.name);
     status.textContent = 'Küldöm az üzenetedet…';
     button.disabled = true;
-
-    try {
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: data.toString(),
-      });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      form.reset();
-      status.textContent = 'Köszönöm, megkaptam az üzeneted! Hamarosan jelentkezem.';
-      button.disabled = false;
-    } catch (error) {
-      status.textContent = 'Az üzenet most nem ment el. Kérlek, írj a hello.elizabeauty@gmail.com címre, vagy hívj a +36 20 344 9272 számon.';
-      button.disabled = false;
-    }
   });
 });
