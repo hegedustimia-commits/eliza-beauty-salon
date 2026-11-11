@@ -1,6 +1,6 @@
 # Eliza Beauty Salon
 
-A kiválasztott, légies weboldal statikus forrása. A négy főoldal és az adatkezelési tervezet a `dist/` mappában található. Az `index.html` helyben megnyitható; a fájlok statikus tárhelyre is másolhatók.
+A kiválasztott, légies weboldal statikus forrása. A négy főoldal, a köszönőoldal és az adatkezelési tájékoztató a `dist/` mappában található. A Netlify a `netlify.toml` alapján ezt a mappát teszi közzé.
 
 ## Állapot
 
@@ -10,4 +10,4 @@ A kiválasztott, légies weboldal statikus forrása. A négy főoldal és az ada
 
 ## Mentési rend
 
-Minden elfogadott tartalmi vagy képi módosítás után külön, beszédes Git-commit készül. A távoli GitHub-mentés a tároló létrehozása és a hozzáférés beállítása után történik.
+Minden elfogadott tartalmi vagy képi módosítás után külön, beszédes Git-commit készül, amelyet feltöltünk a privát GitHub-tárolóba.
