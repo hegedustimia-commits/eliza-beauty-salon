@@ -38,3 +38,5 @@
 .honeypot{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 
 .contact-form .privacy-check{display:flex;align-items:flex-start;gap:.8rem;line-height:1.5}.contact-form .privacy-check input[type="checkbox"]{width:auto;flex:none;margin:.22rem 0 0;accent-color:var(--highlight)}.contact-form .privacy-check a{text-decoration:underline;text-underline-offset:.2em}
+
+.eliza-photo .portrait-photo{object-position:center 26%}
